@@ -11,9 +11,9 @@
           <span class="input-group-text" id="">last and first name *</span>
         </div>
         <input type="text" name="name" placeholder="Votre Nom" class="form-control"
-            value="{{ request.form['name'] }}">
+            value="{{ request.form['name'] }}" autofocus required>
         <input type="text" name="firstname" placeholder="Votre Prenom" class="form-control"
-        value="{{ request.form['firstname'] }}">
+        value="{{ request.form['firstname'] }}" required>
     </div>
 
     <div class="input-group mb-3">
@@ -21,15 +21,15 @@
         <span class="input-group-text" id="basic-addon1">Adress *</span>
       </div>
       <input type="text" name="adress" placeholder="Votre adress" class="form-control"
-      value="{{ request.form['adress'] }}">
+      value="{{ request.form['adress'] }}" required>
     </div>
 
     <div class="input-group mb-3">
         <div class="input-group-prepend">
           <span class="input-group-text" id="basic-addon1">Mail *</span>
         </div>
-        <input type="text" name="mail" placeholder="Votre Mail" class="form-control"
-        value="{{ request.form['mail'] }}">
+        <input type="mail" name="mail" placeholder="Votre Mail" class="form-control"
+        value="{{ request.form['mail'] }}" required>
     </div>
 
     <div class="input-group mb-3">
@@ -37,7 +37,7 @@
           <span class="input-group-text">Sum *</span>
         </div>
         <input type="text" name="somme" placeholder="Somme promise" class="form-control"
-        value="{{ request.form['somme'] }}">
+        value="{{ request.form['somme'] }}" required>
         <div class="input-group-append">
           <span class="input-group-text">€</span>
         </div>
@@ -46,7 +46,7 @@
     <div class="input-group mb-3">
         <div class="input-group-prepend">
           <div class="input-group-text">
-            <input type="checkbox" name="valide" placeholder="Somme promise">
+            <input type="checkbox" name="valide" placeholder="Somme promise" required>
           </div>
         </div>
         <label for="valide">vous avez pris connaissance...</label>

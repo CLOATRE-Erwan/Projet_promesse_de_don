@@ -4,22 +4,21 @@
 
 {% block content %}
 <h1> Sign In </h1>
-<p>* obligatoire</p>
 <form method="post">
     <div class="input-group mb-3">
       <div class="input-group-prepend">
-        <span class="input-group-text" id="basic-addon1">Mail *</span>
+        <span class="input-group-text" id="basic-addon1">Mail</span>
       </div>
       <input type="email" name="mail" placeholder="Votre email" class="form-control"
-      value="{{ request.form['mail'] }}">
+      value="{{ request.form['mail'] }}" autofocus required>
     </div>
 
     <div class="input-group mb-3">
         <div class="input-group-prepend">
-          <span class="input-group-text" id="basic-addon1">Password *</span>
+          <span class="input-group-text" id="basic-addon1">Password</span>
         </div>
         <input type="password" name="password" placeholder="Votre password" class="form-control"
-        value="{{ request.form['password'] }}">
+        value="{{ request.form['password'] }}" required>
     </div>
 
     <div class="form-group">
