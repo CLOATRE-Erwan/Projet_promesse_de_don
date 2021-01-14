@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block title %}La Croix-Rouge | Promesse de don{% endblock %}
+
+{% block content %}
+<h1>Promesse de don</h1>
+<p>* obligatoire</p>
+<form method="post">
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="">last and first name *</span>
+        </div>
+        <input type="text" name="name" placeholder="Votre Nom" class="form-control"
+            value="{{ request.form['name'] }}">
+        <input type="text" name="firstname" placeholder="Votre Prenom" class="form-control"
+        value="{{ request.form['firstname'] }}">
+    </div>
+
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">Adress *</span>
+      </div>
+      <input type="text" name="adress" placeholder="Votre adress" class="form-control"
+      value="{{ request.form['adress'] }}">
+    </div>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">Mail *</span>
+        </div>
+        <input type="text" name="mail" placeholder="Votre Mail" class="form-control"
+        value="{{ request.form['mail'] }}">
+    </div>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Sum *</span>
+        </div>
+        <input type="text" name="somme" placeholder="Somme promise" class="form-control"
+        value="{{ request.form['somme'] }}">
+        <div class="input-group-append">
+          <span class="input-group-text">€</span>
+        </div>
+    </div>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <input type="checkbox" name="valide" placeholder="Somme promise">
+          </div>
+        </div>
+        <label for="valide">vous avez pris connaissance...</label>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>
+{% endblock %}

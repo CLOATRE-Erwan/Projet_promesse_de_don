@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}La Croix-Rouge | Liste des donations {% endblock %}
+
+{% block content %}
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="{{url_for('donor')}}">Donateurs</a>
+            </li>
+            <li class="nav-item active">
+            <a class="nav-link" href="{{url_for('panel')}}">Charts</a>
+            </li>
+            </ul>
+        </div>
+    </nav>
+    <h1>Liste des donations</h1>
+    <p>Total récolté : {{ total }} €</p>
+    {% for don in dons %}
+        <h2>{{ don['name'] }}, {{ don['firstname'] }}</h2>
+        <p>{{ don['mail'] }}</p>
+        <p>{{ don['adress'] }}</p>
+        <p>{{ don['donation'] }} €</p>
+        <span class="badge badge-primary">{{ don['date'] }}</span>
+        <hr>
+    {% endfor %}
+{% endblock %}
